@@ -6,7 +6,9 @@ from sqlalchemy import create_engine, desc
 from sqlalchemy import (CheckConstraint, UniqueConstraint,
     Column, DateTime, Integer, String)
 
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
+Base = declarative_base()
+
 
 engine = create_engine('sqlite:///migrations_test.db')
 
